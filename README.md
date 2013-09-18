@@ -37,6 +37,8 @@ Using the responsive images module is simple. Add a `gumby-media` attribute to a
 		 
 	<img gumby-supports="webp|img/img_silence_demo.webp" 
 			 gumby-default="img/img_silence_demo.jpg" />
+			 
+*The media queries are passed directly to [JavaScript's matchMedia function](https://developer.mozilla.org/en-US/docs/Web/API/window.matchMedia) which is not supported in <= IE9, but fear not, you can include [Paul Irish's polyfil](https://github.com/paulirish/matchMedia.js/) and all will be well*
 
 
 **MIT Open Source License**
