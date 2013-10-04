@@ -21,7 +21,7 @@
 		this.setup();
 
 		var scope = this;
-		$(window).on('gumby.trigger '+(!this.media || 'resize'), function(e) {
+		$(window).on('load gumby.trigger '+(!this.media || 'resize'), function(e) {
 			scope.fire();
 		});
 
