@@ -30,6 +30,8 @@
 			scope.setup();
 			scope.fire();
 		});
+
+		scope.fire();
 	}
 
 	// set up module based on attributes
