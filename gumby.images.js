@@ -21,7 +21,7 @@
 		this.setup();
 
 		var scope = this;
-		$(window).on('load gumby.trigger '+(!this.media || 'resize'), function(e) {
+		$(window).on('gumby.trigger '+(!this.media || 'resize'), function(e) {
 			scope.fire();
 		});
 
@@ -30,6 +30,8 @@
 			scope.setup();
 			scope.fire();
 		});
+
+		scope.fire();
 	}
 
 	// set up module based on attributes
