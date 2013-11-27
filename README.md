@@ -10,7 +10,7 @@ A bower package is available to install this module into your project. We recomm
 
 	$ bower install gumby-images
 
-Include gumby.images.js in the same fashion as your other UI modules, after gumby.js and before gumby.init.js. In production you should minify JavaScript files into a single optimized gumby.min.js file, ensuring the order (gumby.js, UI modules, gumby.init.js) is retained. 
+Include gumby.images.js in the same fashion as your other UI modules, after gumby.js and before gumby.init.js. In production you should minify JavaScript files into a single optimized gumby.min.js file, ensuring the order (gumby.js, UI modules, gumby.init.js) is retained.
 
 	<!--
 	Include gumby.js followed by UI modules.
@@ -20,7 +20,7 @@ Include gumby.images.js in the same fashion as your other UI modules, after gumb
 	<script src="/bower_components/gumby/js/libs/ui/gumby.toggleswitch.js"></script>
 	<script src="/bower_components/gumby-images/gumby.images.js"></script>
 	<script src="/bower_components/gumby/js/libs/gumby.init.js"></script>
-	
+
 	<!-- In production minifiy and combine the above files into gumby.min.js -->
 	<script src="js/gumby.min.js"></script>
 	<script src="js/plugins.js"></script>
@@ -34,12 +34,23 @@ Using the responsive images module is simple. Add a `gumby-media` attribute to a
 	<img gumby-media="only screen and (max-width: 768px) and (min-width: 501px)|img/img_silence_demo-768.jpg,
 					  only screen and (max-width: 500px)|img/img_silence_demo-500.jpg"
 		 gumby-default="img/img_silence_demo.jpg" />
-		 
-	<img gumby-supports="webp|img/img_silence_demo.webp" 
-			 gumby-default="img/img_silence_demo.jpg" />
-			 
-*The media queries are passed directly to [JavaScript's matchMedia function](https://developer.mozilla.org/en-US/docs/Web/API/window.matchMedia) which is not supported in <= IE9, but fear not, you can include [Paul Irish's polyfil](https://github.com/paulirish/matchMedia.js/) and all will be well*
 
+	<img gumby-supports="webp|img/img_silence_demo.webp"
+			 gumby-default="img/img_silence_demo.jpg" />
+
+### Shorthand
+
+The characters `<` and `>` can be used as shorthand for `max-width` and `min-width` to make it easier and less verbose.
+
+For exampe, the following...
+
+	<div gumby-media="< 768px | 2-1-0"></div>
+
+Will be converted to...
+
+	<div gumby-media="(max-width: 768px) | 2-1-0"></div>
+
+*The media queries are passed directly to [JavaScript's matchMedia function](https://developer.mozilla.org/en-US/docs/Web/API/window.matchMedia) which is not supported in <= IE9, but fear not, you can include [Paul Irish's polyfil](https://github.com/paulirish/matchMedia.js/) and all will be well*
 
 **MIT Open Source License**
 
@@ -56,5 +67,5 @@ WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEM
 COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
 OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-	
-	
+
+
