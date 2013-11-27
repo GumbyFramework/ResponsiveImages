@@ -83,7 +83,6 @@
 
 		// no image to load
 		if(!success) {
-			Gumby.warn('No responsive images tests passed', this.$el);
 			return false;
 		}
 
