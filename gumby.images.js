@@ -159,8 +159,9 @@
 			str = str.replace('>', 'min-width: ').replace('<', 'max-width: ');
 		}
 
-		// check if media query wrapped in ()
-		if(str.charAt(0) !== '(' && str.charAt(str.length - 1) !== ')') {
+		// check if media query (prevent wrapping feature detection tests) AND if media query, wrapped in ()
+ 		if(str.indexOf('width') > -1 
+ 				&& str.charAt(0) !== '(' && str.charAt(str.length - 1) !== ')') {
 			str = '('+str+')';
 		}
 
