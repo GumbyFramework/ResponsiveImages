@@ -13,6 +13,7 @@ A bower package is available to install this module into your project. We recomm
 
 Include `gumby.images.js` in the same fashion as your other UI modules, after `gumby.js` and before `gumby.init.js`. In production you should minify JavaScript files into a single optimized `gumby.min.js` file, ensuring the order (`gumby.js`, UI modules, `gumby.init.js`) is retained.
 
+
 	<!--
 	Include gumby.js followed by UI modules.
 	Or concatenate and minify into a single file-->
@@ -31,7 +32,7 @@ Include `gumby.images.js` in the same fashion as your other UI modules, after `g
 Usage
 -----
 
-Using the responsive images module is simple. Add a `gumby-media` attribute to any element containing any number of comma separated media query / image path pairs. Media queries and their associated images should be separated with a pipe. You can also add a `gumby-supports` attribute to any element, containing any number of comma seaparted features / image path pairs, in the same format as `gumby-media`. Features will be tested with Modernizr so ensure your Modernizr build contains all the tests you require. Both `gumby-media` and `gumby-supports` will fallback to the image supplied in `gumby-default`. If applied to an `<img>` the `src` will be updated otherwise the `background-image` will be used.
+Using the responsive images module is simple. Add a `gumby-media` attribute to any element containing any number of comma separated media query / image path pairs. Media queries and their associated images should be separated with a pipe. You can also add a `gumby-supports` attribute to any element, containing any number of comma separated features / image path pairs, in the same format as `gumby-media`. Features will be tested with Modernizr so ensure your Modernizr build contains all the tests you require. Both `gumby-media` and `gumby-supports` will fallback to the image supplied in `gumby-default`. If applied to an `<img>` the `src` will be updated otherwise the `background-image` will be used.
 
 	<img gumby-media="only screen and (max-width: 768px) and (min-width: 501px)|img/img_silence_demo-768.jpg,
 					  only screen and (max-width: 500px)|img/img_silence_demo-500.jpg"
@@ -45,7 +46,7 @@ Using the responsive images module is simple. Add a `gumby-media` attribute to a
 
 The characters `<` and `>` can be used as shorthand for `max-width` and `min-width` to make it easier and less verbose.
 
-For exampe, the following...
+For example, the following...
 
 	<div gumby-media="< 768px | 2-1-0"></div>
 
@@ -69,6 +70,4 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
 COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
 OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-
 
