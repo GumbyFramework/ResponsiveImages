@@ -3,6 +3,7 @@ Gumby Responsive Images
 
 This module will preload and insert images based on media queries and/or feature detection. For more detailed documentation please check out the [Gumby docs](http://gumbyframework.com).
 
+
 Installation
 ------------
 
@@ -10,7 +11,7 @@ A bower package is available to install this module into your project. We recomm
 
 	$ bower install gumby-images
 
-Include gumby.images.js in the same fashion as your other UI modules, after gumby.js and before gumby.init.js. In production you should minify JavaScript files into a single optimized gumby.min.js file, ensuring the order (gumby.js, UI modules, gumby.init.js) is retained.
+Include `gumby.images.js` in the same fashion as your other UI modules, after `gumby.js` and before `gumby.init.js`. In production you should minify JavaScript files into a single optimized `gumby.min.js` file, ensuring the order (`gumby.js`, UI modules, `gumby.init.js`) is retained.
 
 	<!--
 	Include gumby.js followed by UI modules.
@@ -26,6 +27,7 @@ Include gumby.images.js in the same fashion as your other UI modules, after gumb
 	<script src="js/plugins.js"></script>
 	<script src="js/main.js"></script>
 
+
 Usage
 -----
 
@@ -37,6 +39,7 @@ Using the responsive images module is simple. Add a `gumby-media` attribute to a
 
 	<img gumby-supports="webp|img/img_silence_demo.webp"
 			 gumby-default="img/img_silence_demo.jpg" />
+
 
 ### Shorthand
 
